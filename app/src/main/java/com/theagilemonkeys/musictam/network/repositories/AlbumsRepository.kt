@@ -5,7 +5,7 @@ import com.theagilemonkeys.musictam.models.Response
 import com.theagilemonkeys.musictam.network.services.AlbumsService
 
 interface AlbumsRepositoryInterface {
-    suspend fun getAlbums(artistId: String): Result<Response<Album>>
+    suspend fun getAlbums(amgArtistId: Int): Result<Response<Album>>
 }
 
 
@@ -15,6 +15,6 @@ interface AlbumsRepositoryInterface {
  */
 class AlbumsRepository(private val albumsService: AlbumsService) : AlbumsRepositoryInterface,
     BaseRepository() {
-    override suspend fun getAlbums(artistId: String): Result<Response<Album>> =
-        safeCall { albumsService.getAlbums(artistId) }
+    override suspend fun getAlbums(amgArtistId: Int): Result<Response<Album>> =
+        safeCall { albumsService.getAlbums(amgArtistId) }
 }
