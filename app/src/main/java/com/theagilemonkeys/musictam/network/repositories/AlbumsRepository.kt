@@ -8,7 +8,6 @@ interface AlbumsRepositoryInterface {
     suspend fun getAlbums(amgArtistId: Int): Result<Response<Album>>
 }
 
-
 /**
  * [com.theagilemonkeys.musictam.network.services.AlbumsService] instance can be provided by a
  * [com.theagilemonkeys.musictam.network.clients.MusicClient] instance.
