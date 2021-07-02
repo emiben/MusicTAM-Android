@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UiTextView" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="UiTextView.xl">
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="UiTextView.xl.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UiTextView.m">
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="UiTextView.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="UiTextView.white.xxl">
+        <item name="android:textSize">60dp</item>
+    </style>
+
+    <style name="UiTextView.white.xl">
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="UiTextView.white.xl.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="UiTextView.white.m">
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="UiTextView.white.m.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

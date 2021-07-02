@@ -9,4 +9,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="search_hint">Search for bands…</string>
+    <string name="recommended_for_today">Recommended for you</string>
+
+    <string name="error_title">Oops! Something went wrong…</string>
 </resources>
