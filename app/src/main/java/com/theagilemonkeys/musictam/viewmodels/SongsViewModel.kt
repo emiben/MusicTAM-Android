@@ -5,6 +5,7 @@ import com.theagilemonkeys.musictam.models.Song
 import com.theagilemonkeys.musictam.network.repositories.Result
 import com.theagilemonkeys.musictam.network.repositories.SongsRepository
 import com.theagilemonkeys.musictam.utils.BaseViewModel
+import com.theagilemonkeys.musictam.utils.Constants
 import com.theagilemonkeys.musictam.utils.Resource
 import com.theagilemonkeys.musictam.utils.Status
 import kotlinx.coroutines.CoroutineDispatcher
@@ -20,7 +21,9 @@ class SongsViewModel(
         val result = repository.getSongs(args[0].toInt())
 
         response = if (result is Result.Success) {
-            if(result.data.resultCount == 0){
+            if(result.data.resultCount == 0 || (result.data.resultCount == 1 && result.data.results[0].wrapperType?.equals(
+                    Constants.TRACK
+                ) != true)){
                 getNoSongsError()
             } else {
                 val data = result.data.results

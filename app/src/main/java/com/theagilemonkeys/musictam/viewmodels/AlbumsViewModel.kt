@@ -6,6 +6,7 @@ import com.theagilemonkeys.musictam.network.repositories.AlbumsRepository
 import com.theagilemonkeys.musictam.network.repositories.ArtistsRepository
 import com.theagilemonkeys.musictam.network.repositories.Result
 import com.theagilemonkeys.musictam.utils.BaseViewModel
+import com.theagilemonkeys.musictam.utils.Constants
 import com.theagilemonkeys.musictam.utils.Constants.ABC
 import com.theagilemonkeys.musictam.utils.Resource
 import com.theagilemonkeys.musictam.utils.Status
@@ -24,7 +25,9 @@ class AlbumsViewModel(
         val result = repository.getAlbums(args[0].toInt())
 
         response = if (result is Result.Success) {
-            if(result.data.resultCount == 0){
+            if(result.data.resultCount == 0 || (result.data.resultCount == 1 && result.data.results[0].wrapperType?.equals(
+                    Constants.COLLECTION
+                ) != true)){
                 getNoAlbumsError()
             } else {
                 val data = result.data.results

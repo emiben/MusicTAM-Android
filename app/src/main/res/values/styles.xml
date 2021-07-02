@@ -41,4 +41,8 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="UiTextView.m.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

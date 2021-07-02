@@ -42,5 +42,14 @@
         android:id="@+id/songsFragment"
         android:name="com.theagilemonkeys.musictam.SongsFragment"
         android:label="fragment_songs"
-        tools:layout="@layout/fragment_songs" />
+        tools:layout="@layout/fragment_songs" >
+        <action
+            android:id="@+id/action_songsFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.theagilemonkeys.musictam.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
 </navigation>

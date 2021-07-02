@@ -1,9 +1,11 @@
 package com.theagilemonkeys.musictam
 
+import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.theagilemonkeys.musictam.adapters.SongsAdapter
 import com.theagilemonkeys.musictam.databinding.FragmentSongsBinding
 import com.theagilemonkeys.musictam.models.Song
@@ -65,6 +67,8 @@ class SongsFragment : BaseBindingFragment() {
     }
 
     private fun onSongClicked(song: Song, view: View) {
-
+        val bundle = Bundle()
+        bundle.putParcelable(SONG, song)
+        view.findNavController().navigate(R.id.action_songsFragment_to_videoFragment, bundle)
     }
 }

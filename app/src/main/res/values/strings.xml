@@ -12,6 +12,10 @@
 
     <string name="search_hint">Search for bands…</string>
     <string name="recommended_for_today">Recommended for you</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="now_playing_error">Looks like we couldn\'t find the media file...</string>
 
     <string name="error_title">Oops! Something went wrong…</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
